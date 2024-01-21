@@ -28,26 +28,27 @@ public class SprintServiceApplication {
                     .sprintName("crud management Project number 1")
                     .sprintGoal("CRUD ( Project, Sprint) Classes  ")
                     .dateDebut(LocalDate.now().plusDays(1))
-                    .dateFin(new Date(LocalDate.now().getYear(), LocalDate.now().getMonthValue(),LocalDate.now().plusDays(7).getDayOfMonth()))
+                    .dateFin(LocalDate.now().plusWeeks(2))
                     .projectId(1)
                     .build();
             Sprint sprint2 = Sprint.builder()
-                    .id(1)
+                    .id(2)
                     .sprintName("crud management Project number 2")
                     .sprintGoal("CRUD ( UserStory, Developper ) Classes  ")
                     .dateDebut(LocalDate.now().plusDays(1))
-                    .dateFin(new Date(LocalDate.now().getYear(), LocalDate.now().getMonthValue(),LocalDate.now().plusDays(14).getDayOfMonth()))
+                    .dateFin(LocalDate.now().plusWeeks(3))
                     .projectId(1)
                     .build();
             Sprint sprint3 = Sprint.builder()
-                    .id(1)
+                    .id(3)
                     .sprintName("crud management LMS number 1")
                     .sprintGoal("CRUD ( Science ) Classes  ")
                     .dateDebut(LocalDate.now().plusDays(1))
-                    .dateFin(new Date(LocalDate.now().getYear(), LocalDate.now().getMonthValue(),LocalDate.now().plusDays(7).getDayOfMonth()))
+                    .dateFin(LocalDate.now().plusWeeks(1))
                     .projectId(2)
                     .build();
-            sprintService.add(sprint1);sprintService.add(sprint2);
+            sprintService.add(sprint1);
+            sprintService.add(sprint2);
             sprintService.add(sprint3);
 
         };

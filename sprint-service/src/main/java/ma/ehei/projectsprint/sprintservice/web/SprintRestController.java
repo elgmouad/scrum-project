@@ -17,7 +17,7 @@ import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/sprint")
+@RequestMapping("/sprints")
 public class SprintRestController {
     private SprintService sprintService;
     private ProjectRestClient projectRestClient;

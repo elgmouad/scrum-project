@@ -1,0 +1,36 @@
+<div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Sprint Name</th>
+      <th>Sprint Goal</th>
+      <th>Date Debut</th>
+      <th>Date Fin</th>
+      <th>ProjectID</th>
+      <th>Project Libelle</th>
+      <th>Project Description</th>
+      <th>Project Date Debut</th>
+      <th>Project Sprint Days</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let sprint of sprints" class="p-2">
+        <td>{{sprint.id}}</td>
+        <td>{{sprint.sprintName}}</td>
+        <td>{{sprint.sprintGoal}}</td>
+        <td>{{sprint.dateDebut}}</td>
+        <td>{{sprint.dateFin}}</td>
+        <td >{{sprint.project.id}}</td>
+        <td >{{sprint.project.libelle}}</td>
+        <td>{{sprint.project.description}}</td>
+        <td >{{sprint.project.dateDebut}}</td>
+        <td >{{sprint.project.sprintDays}}</td>
+        <td (click)="handleDelete(sprint)" class="btn btn-outline-danger p-2 m-2">
+          <i class="bi bi-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

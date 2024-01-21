@@ -16,7 +16,7 @@ public class Sprint implements Serializable {
     private String sprintName;
     private String sprintGoal;
     private LocalDate dateDebut;
-    private Date dateFin;
+    private LocalDate dateFin;
     @Transient
     private Project project;
     private Integer projectId;

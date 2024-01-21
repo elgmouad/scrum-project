@@ -1,0 +1,26 @@
+<div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Libelle</th>
+      <th>Description</th>
+      <th>Sprint Days</th>
+      <th>Date Debut</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects" class="p-2">
+        <td>{{project.id}}</td>
+        <td>{{project.libelle}}</td>
+        <td>{{project.description}}</td>
+        <td>{{project.sprintDays}}</td>
+        <td>{{project.dateDebut}}</td>
+        <td (click)="handleDelete(project)" class="btn btn-outline-danger p-2 m-2">
+          <i class="bi bi-trash"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
